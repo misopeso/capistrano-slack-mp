@@ -1,3 +1,5 @@
+require 'slack-notifier'
+
 class Capistrano::Slack::Notifier
 
   attr_reader :team, :token, :notifier

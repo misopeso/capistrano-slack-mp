@@ -1,6 +1,6 @@
 # Capistrano::Slack
 
-TODO: Write a gem description
+Slack notification for Capistrano v3.
 
 ## Installation
 
@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    # Capfile
+    require 'capistrano/slack'
+
+Please note that any `require` should be placed in `Capfile`, not `config/deploy.rb`.
+
+    # config/deploy.rb
+    set :slack_team, 'your team' # Required
+    set :slack_toke, 'your token' # Required
+
+    set :slack_channel, '#general' # Optional
+    set :slack_username, 'capistranobot' # Optional
+
+You need to set the slack integration. You should check out the [Slack incoming-webhook documentation](https://my.slack.com/services/new/incoming-webhook) for finding out parameters.
 
 ## Contributing
 
