@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kuprij@mac.com"]
   spec.summary       = %q{Capistrano integration for Slack.}
   spec.description   = %q{Capistrano integration for Slack.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/misopeso/capistrano-slack-mp"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -30,7 +30,9 @@ Please note that any `require` should be placed in `Capfile`, not `config/deploy
     set :slack_channel, '#general' # Optional
     set :slack_username, 'capistranobot' # Optional
 
-You need to set the slack integration. You should check out the [Slack incoming-webhook documentation](https://my.slack.com/services/new/incoming-webhook) for finding out parameters.
+You need to add the integration in Slack. You should check out the [Slack Incoming WebHooks documentation](https://my.slack.com/services/new/incoming-webhook) for finding out parameters.
+
+:slack_channel and :slack_username are optional. If you do not specify, these parameters are used Slack integration settings.
 
 ## Contributing
 
