@@ -25,7 +25,7 @@ Please note that any `require` should be placed in `Capfile`, not `config/deploy
 
     # config/deploy.rb
     set :slack_team, 'your team' # Required
-    set :slack_toke, 'your token' # Required
+    set :slack_token, 'your token' # Required
 
     set :slack_channel, '#general' # Optional
     set :slack_username, 'capistranobot' # Optional
