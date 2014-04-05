@@ -13,7 +13,11 @@ namespace :deploy do
         if slack_token.nil? || slack_team.nil?
           error ":slack_token and :slack_team are required."
         else
-          message = revision_log_message
+          application = fetch(:application)
+          branch = fetch(:branch)
+          stage = fetch(:stage, :production)
+
+          message = "#{application}(branch: #{branch}) has deployed successfully to #{stage} by #{local_user}"
 
           options = {}
           options[:channel] = slack_channel unless slack_channel.nil?
@@ -21,6 +25,8 @@ namespace :deploy do
 
           notifier = Capistrano::Slack::Notifier.new(slack_team, slack_token)
           notifier.notify(message, options)
+
+          info "Send notification message to Slack."
         end
       end
     end

@@ -32,11 +32,11 @@ Please note that any `require` should be placed in `Capfile`, not `config/deploy
 
 You need to add the integration in Slack. You should check out the [Slack Incoming WebHooks documentation](https://my.slack.com/services/new/incoming-webhook) for finding out parameters.
 
-:slack_channel and :slack_username are optional. If you do not specify, these parameters are used Slack integration settings.
+`:slack_channel` and `:slack_username` are optional. If you do not specify, these parameters are used Slack integration settings.
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/capistrano-slack-mp/fork )
+1. Fork it ( http://github.com/misopeso/capistrano-slack-mp/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
