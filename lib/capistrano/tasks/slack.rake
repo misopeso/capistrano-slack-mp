@@ -16,8 +16,13 @@ namespace :deploy do
           application = fetch(:application)
           branch = fetch(:branch)
           stage = fetch(:stage, :production)
+          rollback = fetch(:rollback_timestamp)
 
-          message = "#{application}(branch: #{branch}) has deployed successfully to #{stage} by #{local_user}"
+          message = if rollback.nil?
+            "#{application}(branch: #{branch}) has deployed successfully to #{stage} by #{local_user}"
+          else
+            "#{application} has rolled back to release {rollback}"
+          end
 
           options = {}
           options[:channel] = slack_channel unless slack_channel.nil?

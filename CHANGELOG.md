@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 (April 6, 2014)
+
+### enhancements
+
+* Notification message at the time of rollback improved
+
 ## 0.1.1 (April 6, 2014)
 
 ### enhancements
