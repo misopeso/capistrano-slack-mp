@@ -21,7 +21,7 @@ namespace :deploy do
           message = if rollback.nil?
             "#{application}(branch: #{branch}) has deployed successfully to #{stage} by #{local_user}"
           else
-            "#{application} has rolled back to release {rollback}"
+            "#{application} has rolled back to release #{rollback}"
           end
 
           options = {}
